@@ -43,13 +43,21 @@ extension String {
 
 extension Int {
     var years: DateComponents { return DateComponents(year: self) }
+    var year: DateComponents {return years}
     var months: DateComponents { return DateComponents(month: self) }
+    var month: DateComponents {return months}
     var days: DateComponents { return DateComponents(day: self) }
+    var day: DateComponents {return days}
     var weeks: DateComponents { return DateComponents(day: 7*self) }
+    var week: DateComponents {return weeks}
     var hours: DateComponents { return DateComponents(hour: self) }
+    var hour: DateComponents {return hours}
     var minuts: DateComponents { return DateComponents(minute: self) }
+    var minut: DateComponents {return minuts}
     var seconds: DateComponents { return DateComponents(second: self) }
-    var nanosecond: DateComponents { return DateComponents(nanosecond: self)}
+    var second: DateComponents {return seconds}
+    var nanoseconds: DateComponents { return DateComponents(nanosecond: self)}
+    var nanosecond: DateComponents {return nanoseconds}
 }
 
 extension Date {
@@ -75,6 +83,17 @@ extension Date {
     var dateComponents: DateComponents { return calendar.dateComponents([.era, .year, .month, .day, .hour, .minute, .second, .nanosecond], from: self) }
     
     
+    /**
+    * 根据数据生成日期
+    *
+    * - Parameters:
+    *   - year: 必填
+    *   - month: 默认1
+    *   - day: 默认1
+    *   - hour: 默认0
+    *   - minute: 默认0
+    *   - second: 默认0
+    */
     init(year: Int, month: Int = 1, day: Int = 1, hour: Int = 0, minute: Int = 0, second: Int = 0) {
         let now = Date()
         var dateComponents = Calendar.current.dateComponents([.era, .year, .month, .day, .hour, .minute, .second, .nanosecond], from: now)
