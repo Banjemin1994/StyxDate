@@ -1,8 +1,8 @@
 # StyxDate
-// 根据数据生成Date
+*根据数据生成Date*
 
-`let date = Date(year: 1998, month: 2, day: 18, hour: 15, minute: 58, second: 56)`<br>
-`let date2 = Date(year: 1990, month: 2, day: 18)`
+```let date = Date(year: 1998, month: 2, day: 18, hour: 15, minute: 58, second: 56)
+let date2 = Date(year: 1990, month: 2, day: 18)```
 
 // 快速获取日期
 
